@@ -19,6 +19,7 @@
         [self _createNodes];
     }
     
+    //哈哈哈提交到git
     [self changePlayerPosition];
 }
 
