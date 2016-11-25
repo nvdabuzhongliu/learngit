@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="JYMonsterCell">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dt1-nW-Kjp">
+                        <rect key="frame" x="5" y="18" width="90" height="90"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="90" id="NYt-ZR-18O"/>
+                            <constraint firstAttribute="width" constant="90" id="bjm-vz-iNr"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monsterBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="72G-03-bLe">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="150" id="jXt-hw-RnN"/>
+                            <constraint firstAttribute="width" constant="100" id="m7c-zH-1c6"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="史莱姆" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DJ-Mp-Wmx">
+                        <rect key="frame" x="8" y="119" width="84" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="0en-8S-N4m"/>
+                            <constraint firstAttribute="width" constant="84" id="hxJ-ma-uit"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.99919113005050508" green="0.99919113005050508" blue="0.99919113005050508" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lv     1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxs-Q2-aDA">
+                        <rect key="frame" x="26" y="6" width="49" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="FIu-hj-9LH"/>
+                            <constraint firstAttribute="width" constant="49" id="IGf-qB-NKi"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                        <color key="textColor" red="0.99751420454545459" green="0.99751420454545459" blue="0.99751420454545459" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="war.png" translatesAutoresizingMaskIntoConstraints="NO" id="yX8-7T-ns4">
+                        <rect key="frame" x="50" y="80" width="42" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="42" id="QWA-Xw-bW1"/>
+                            <constraint firstAttribute="height" constant="21" id="RPE-Ek-Nhl"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="1DJ-Mp-Wmx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="0eQ-Mf-k2Y"/>
+                <constraint firstItem="cxs-Q2-aDA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="6" id="5jD-Ft-M1N"/>
+                <constraint firstItem="72G-03-bLe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7Cl-L8-usv"/>
+                <constraint firstItem="yX8-7T-ns4" firstAttribute="top" secondItem="cxs-Q2-aDA" secondAttribute="bottom" constant="53" id="7hk-PN-S61"/>
+                <constraint firstItem="Dt1-nW-Kjp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="18" id="FLx-LH-CDi"/>
+                <constraint firstAttribute="trailing" secondItem="Dt1-nW-Kjp" secondAttribute="trailing" constant="5" id="Nou-R1-jeo"/>
+                <constraint firstItem="Dt1-nW-Kjp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Paf-I0-5nM"/>
+                <constraint firstAttribute="trailing" secondItem="cxs-Q2-aDA" secondAttribute="trailing" constant="25" id="ZqZ-3R-jS7"/>
+                <constraint firstAttribute="bottom" secondItem="1DJ-Mp-Wmx" secondAttribute="bottom" constant="10" id="bQz-U4-CpG"/>
+                <constraint firstAttribute="bottom" secondItem="72G-03-bLe" secondAttribute="bottom" id="bf8-zc-iux"/>
+                <constraint firstAttribute="trailing" secondItem="1DJ-Mp-Wmx" secondAttribute="trailing" constant="8" id="ejs-yq-FXi"/>
+                <constraint firstItem="1DJ-Mp-Wmx" firstAttribute="top" secondItem="Dt1-nW-Kjp" secondAttribute="bottom" constant="11" id="f5M-2U-ENl"/>
+                <constraint firstAttribute="trailing" secondItem="yX8-7T-ns4" secondAttribute="trailing" constant="8" id="g7O-Do-uFr"/>
+                <constraint firstAttribute="trailing" secondItem="72G-03-bLe" secondAttribute="trailing" id="gF1-hJ-nsA"/>
+                <constraint firstItem="72G-03-bLe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="sBh-o6-Bbj"/>
+                <constraint firstItem="cxs-Q2-aDA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="26" id="vvS-YH-RlE"/>
+                <constraint firstItem="yX8-7T-ns4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="50" id="xVZ-xO-ntt"/>
+            </constraints>
+            <size key="customSize" width="92" height="89"/>
+            <connections>
+                <outlet property="Lv" destination="cxs-Q2-aDA" id="Lil-vW-vJf"/>
+                <outlet property="Name" destination="1DJ-Mp-Wmx" id="wXT-CV-aZl"/>
+                <outlet property="Pic" destination="Dt1-nW-Kjp" id="Igg-7U-Rko"/>
+                <outlet property="Status" destination="yX8-7T-ns4" id="ek5-CM-hzF"/>
+            </connections>
+            <point key="canvasLocation" x="222" y="145"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="monsterBG.png" width="100" height="150"/>
+        <image name="war.png" width="89" height="42"/>
+    </resources>
+</document>
