@@ -19,14 +19,14 @@
         [self _createNodes];
     }
     
-    //哈哈哈提交到git
+    
     [self changePlayerPosition];
 }
 
 - (void)_createNodes
 {
     self.physicsWorld.contactDelegate = self;
-    
+    //分布式管理系统
     [self setFrame];
     
     if ([kDeviceVersion floatValue] < 8.0) {
