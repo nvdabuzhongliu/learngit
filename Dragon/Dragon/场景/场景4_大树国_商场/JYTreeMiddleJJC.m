@@ -8,7 +8,9 @@
 
 
 @implementation JYTreeMiddleJJC
-
+{
+    SKSpriteNode *_bg;
+}
 
 
 - (void)didMoveToView:(SKView *)view
@@ -33,48 +35,44 @@
     [self setPlayerType:@"left"];
     [self addChild:self.player];
     
+    if ([kDeviceVersion floatValue] < 8.0) {
+        
+    }else{
+        _bg = (SKSpriteNode *)[self childNodeWithName:@"bg"];
+    }
+ 
     //墙壁
-    [self _createWalls];
+    [self createWalls:7 superSence:_bg];
     
     //大树国中部node
     [self _createMiddleNode];
     
     //大树国顶部node
     [self _createTopNode];
- 
+    
+    //JJC里边
+    [self _createJJC];
+    
     [self setMonsterWithSuperSence:self];
 
 }
 
-- (void)_createWalls
+- (void)_createJJC
 {
-    NSArray *arr = @[@[@(135),@(0),@(1),@(self.screenHeight)],
-                     @[@(135 + 60),@(0),@(1),@(90)],
-                     @[@(135 + 60),@(210),@(1),@(165)],
-                     @[@(135 + 60),@(90),@(325),@(1)],
-                     @[@(135 + 60 + 325),@(90),@(1),@(50)],
-                     @[@(135 + 60 + 325),@(90 + 50),@(150),@(1)],
-                     @[@(135 + 60),@(210),@(70),@(1)],
-                     @[@(135 + 60 + 70),@(210),@(1),@(20)],
-                     @[@(135 + 60 + 70),@(210 + 20),@(145),@(1)],
-                     @[@(135 + 60 + 70 + 145),@(210),@(1),@(20)],
-                     @[@(135 + 60 + 70 + 145),@(210),@(70),@(1)],
-                     @[@(135 + 60 + 70 + 145),@(210),@(1),@(170)],
-                     @[@(135 + 60 + 70 + 145 + 70),@(260),@(1),@(200)],
-                     @[@(135 + 60 + 70 + 145 + 70),@(260),@(200),@(1)]];
-    
-    [self _createWalls:arr superSence:self];
-  
+    SKSpriteNode *node = (SKSpriteNode *)[_bg childNodeWithName:kSence_JJC];
+    [self setChangeSenceNode:node key:kSence_JJC];
 }
 
 - (void)_createMiddleNode
 {
-    [self setChangeSenceNode:@{@"x":@(135),@"y":@(0),@"width":@(60),@"height":@(1)} key:kSence_treeMiddle superSence:self];
+    SKSpriteNode *node = (SKSpriteNode *)[_bg childNodeWithName:kSence_treeMiddle];
+    [self setChangeSenceNode:node key:kSence_treeMiddle];
 }
 
 - (void)_createTopNode
 {
-   [self setChangeSenceNode:@{@"x":@(135),@"y":@(self.screenHeight - 1),@"width":@(60),@"height":@(1)} key:kSence_treeTop superSence:self];
+    SKSpriteNode *node = (SKSpriteNode *)[_bg childNodeWithName:kSence_treeTop];
+    [self setChangeSenceNode:node key:kSence_treeTop];
 }
 
 #pragma mark 碰撞检测
@@ -91,6 +89,12 @@
     else if([A.userData objectForKey:kSence_treeTop]){
     
         [self presentSceneWithPosition:CGPointMake(135 + self.player.size.width / 2.0 + 5,self.player.size.height / 2.0 + 5) scenePosition:CGPointMake(0, 0) texture:self.dic_player[@"up"][0] key:kSence_treeTop tra:nil];
+        
+    }
+    
+    else if([A.userData objectForKey:kSence_JJC]){
+    
+        [self presentSceneWithPosition:CGPointMake(1000, 30) scenePosition:CGPointMake(-667, 0) texture:self.dic_player[@"up"][0] key:kSence_JJC tra:nil];
         
     }
 }

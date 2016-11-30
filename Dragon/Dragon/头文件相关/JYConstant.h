@@ -24,6 +24,7 @@
 #define kSence_door1        @"JYDoor1"     //传送门1
 #define kSence_door1_1      @"JYDoor1_1"   //
 #define kSence_door1_4      @"JYDoor1_4"   
+#define kSence_JJC          @"JYJJC"       //JJC
 
 #define kSence_text @"TextScene"
 

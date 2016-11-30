@@ -129,30 +129,23 @@
     spriteY = self.player.position.y + y;
     
     BOOL isCut = NO;
+ 
+    NSLog(@"%d",(int)self.player.position.y);
     
-    if ((int)_playerCutPosition.x != (int)self.player.position.x || (int)_playerCutPosition.y != (int)self.player.position.y) {
-        NSLog(@"我呗卡主了");
-        
-        NSLog(@"记录:   %d",(int)_playerCutPosition.x);
-        NSLog(@"实际:   %d",(int)self.player.position.x);
+    if ((int)self.player.position.x != (int)_playerCutPosition.x || (int)self.player.position.y != (int)_playerCutPosition.y) {
         isCut = YES;
-        //return;
     }
     
     
-    
     self.player.position = CGPointMake(spriteX, spriteY);
+    _playerCutPosition = self.player.position;
+    
     [self changePlayerPic:key];
-    
-    
     
     self.monsterKey1 = [self key:key x:x y:y node:self.player node2:self.monsterNode1 dic:self.monsterDic1 changeKey:self.monsterKey1];
     self.monsterKey2 = [self key:key x:x y:y node:self.monsterNode1 node2:self.monsterNode2 dic:self.monsterDic2 changeKey:self.monsterKey2];
     self.monsterKey3 = [self key:key x:x y:y node:self.monsterNode2 node2:self.monsterNode3 dic:self.monsterDic3 changeKey:self.monsterKey3];
    
-    _playerCutPosition = self.player.position;
-    
-    
     return  isCut;
 }
 
@@ -529,6 +522,7 @@
 {
     self.beginOrEndOperateBlock(NO);//可选择操作
     self.beginOrEndGameBlock(NO);   //可移动操作
+    
     
     if (!self.isAlreadyCreate) {
         

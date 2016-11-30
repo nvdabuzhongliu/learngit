@@ -85,6 +85,10 @@
 @end
 
 
+//JJC
+@interface JYJJC : BaseScene
+@end
+
 //测试
 @interface TextScene : BaseScene
 @end
