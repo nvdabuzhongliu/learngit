@@ -54,6 +54,9 @@
 		437D41A91DACD98D007EEC43 /* JYMonsterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437D41A81DACD98D007EEC43 /* JYMonsterCell.xib */; };
 		437D41AF1DACDB01007EEC43 /* war.png in Resources */ = {isa = PBXBuildFile; fileRef = 437D41AE1DACDB01007EEC43 /* war.png */; };
 		437D41B11DACDFAC007EEC43 /* 德拉奇.png in Resources */ = {isa = PBXBuildFile; fileRef = 437D41B01DACDFAC007EEC43 /* 德拉奇.png */; };
+		437F02441DED5A500039025A /* door1_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 437F02431DED5A500039025A /* door1_4.png */; };
+		437F02471DED5A620039025A /* JYDoor1_4.m in Sources */ = {isa = PBXBuildFile; fileRef = 437F02461DED5A620039025A /* JYDoor1_4.m */; };
+		437F02491DED5ABC0039025A /* JYDoor1_4.sks in Resources */ = {isa = PBXBuildFile; fileRef = 437F02481DED5ABC0039025A /* JYDoor1_4.sks */; };
 		43874D091DA9DF8D0064498C /* 鬃毛怪.png in Resources */ = {isa = PBXBuildFile; fileRef = 43874D081DA9DF8D0064498C /* 鬃毛怪.png */; };
 		43874D0B1DA9EFE70064498C /* 小蝙蝠.png in Resources */ = {isa = PBXBuildFile; fileRef = 43874D0A1DA9EFE70064498C /* 小蝙蝠.png */; };
 		43874D111DA9FC890064498C /* 牧场管家.png in Resources */ = {isa = PBXBuildFile; fileRef = 43874D101DA9FC890064498C /* 牧场管家.png */; };
@@ -217,6 +220,9 @@
 		437D41A81DACD98D007EEC43 /* JYMonsterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYMonsterCell.xib; sourceTree = "<group>"; };
 		437D41AE1DACDB01007EEC43 /* war.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = war.png; sourceTree = "<group>"; };
 		437D41B01DACDFAC007EEC43 /* 德拉奇.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "德拉奇.png"; sourceTree = "<group>"; };
+		437F02431DED5A500039025A /* door1_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = door1_4.png; sourceTree = "<group>"; };
+		437F02461DED5A620039025A /* JYDoor1_4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYDoor1_4.m; sourceTree = "<group>"; };
+		437F02481DED5ABC0039025A /* JYDoor1_4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = JYDoor1_4.sks; sourceTree = "<group>"; };
 		43874D081DA9DF8D0064498C /* 鬃毛怪.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "鬃毛怪.png"; sourceTree = "<group>"; };
 		43874D0A1DA9EFE70064498C /* 小蝙蝠.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "小蝙蝠.png"; sourceTree = "<group>"; };
 		43874D101DA9FC890064498C /* 牧场管家.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "牧场管家.png"; sourceTree = "<group>"; };
@@ -422,6 +428,8 @@
 				4311CB741DE2D76400B46C81 /* JYDoor1.sks */,
 				43E67CB61DE3EB31009B7604 /* JYDoor1_1.m */,
 				43E67CB81DE3EB87009B7604 /* JYDoor1_1.sks */,
+				437F02461DED5A620039025A /* JYDoor1_4.m */,
+				437F02481DED5ABC0039025A /* JYDoor1_4.sks */,
 			);
 			path = "监牢一层";
 			sourceTree = "<group>";
@@ -545,6 +553,7 @@
 			children = (
 				43E67CBA1DE3F882009B7604 /* 传送门1_1.png */,
 				4311CB6F1DE2D71C00B46C81 /* 传送门1.png */,
+				437F02431DED5A500039025A /* door1_4.png */,
 				435D6F941DDAEE85006F5894 /* 监牢一层.png */,
 				439555131DA89177008CB0B4 /* Default-568h@2x.png */,
 				439555141DA89177008CB0B4 /* Default.png */,
@@ -902,6 +911,7 @@
 				43B4A1451D893F2900AF97EB /* 卷轴1.png in Resources */,
 				4373BBD01DA8EF4E00B2729B /* JYTreeTop.sks in Resources */,
 				43A1AFB11D7FAF530078E01F /* door8.png in Resources */,
+				437F02441DED5A500039025A /* door1_4.png in Resources */,
 				43A1AFA21D7FAF530078E01F /* 床1.png in Resources */,
 				438DECC91D8FD6E200AB0557 /* right.png in Resources */,
 				436667DF1D8100F900FAC193 /* 孵化室_npc2_1.png in Resources */,
@@ -981,6 +991,7 @@
 				43A1AF9F1D7FAF530078E01F /* 坏哥布林.png in Resources */,
 				43A1AFAA1D7FAF530078E01F /* door1.png in Resources */,
 				436667E31D81081000FAC193 /* 孵化室_npc2_3.png in Resources */,
+				437F02491DED5ABC0039025A /* JYDoor1_4.sks in Resources */,
 				4331434A1D86472600AA122C /* 云2.png in Resources */,
 				43A1AFA11D7FAF530078E01F /* 好哥布林.png in Resources */,
 				433143491D86472600AA122C /* 云1.png in Resources */,
@@ -1058,6 +1069,7 @@
 				43A1AFF51D7FAFBC0078E01F /* NSArray+MASAdditions.m in Sources */,
 				43A1B0351D7FB01F0078E01F /* BaseVC.m in Sources */,
 				43A1AFF31D7FAFBC0078E01F /* MASViewAttribute.m in Sources */,
+				437F02471DED5A620039025A /* JYDoor1_4.m in Sources */,
 				43A1B0251D7FAFE40078E01F /* JYOperateManager.m in Sources */,
 				43A1AF391D7FAF090078E01F /* main.m in Sources */,
 				433143501D86542800AA122C /* JYTreeMiddleJJC.m in Sources */,

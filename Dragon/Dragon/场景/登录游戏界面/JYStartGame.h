@@ -81,6 +81,9 @@
 @interface JYDoor1_1 : BaseScene
 @end
 
+@interface JYDoor1_4 : BaseScene
+@end
+
 
 //测试
 @interface TextScene : BaseScene

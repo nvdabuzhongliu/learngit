@@ -125,7 +125,6 @@
     CGFloat spriteX = 0;
     CGFloat spriteY = 0;
     
-    
     spriteX = self.player.position.x + x;
     spriteY = self.player.position.y + y;
     
@@ -133,9 +132,14 @@
     
     if ((int)_playerCutPosition.x != (int)self.player.position.x || (int)_playerCutPosition.y != (int)self.player.position.y) {
         NSLog(@"我呗卡主了");
+        
+        NSLog(@"记录:   %d",(int)_playerCutPosition.x);
+        NSLog(@"实际:   %d",(int)self.player.position.x);
         isCut = YES;
         //return;
     }
+    
+    
     
     self.player.position = CGPointMake(spriteX, spriteY);
     [self changePlayerPic:key];
@@ -145,8 +149,10 @@
     self.monsterKey1 = [self key:key x:x y:y node:self.player node2:self.monsterNode1 dic:self.monsterDic1 changeKey:self.monsterKey1];
     self.monsterKey2 = [self key:key x:x y:y node:self.monsterNode1 node2:self.monsterNode2 dic:self.monsterDic2 changeKey:self.monsterKey2];
     self.monsterKey3 = [self key:key x:x y:y node:self.monsterNode2 node2:self.monsterNode3 dic:self.monsterDic3 changeKey:self.monsterKey3];
-    
+   
     _playerCutPosition = self.player.position;
+    
+    
     return  isCut;
 }
 

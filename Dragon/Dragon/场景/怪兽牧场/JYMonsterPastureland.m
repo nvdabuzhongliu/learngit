@@ -185,7 +185,9 @@
         return NO;
     }
 
-    
+    NSLog(@"非卡主记录:   %d",(int)self.playerCutPosition.x);
+    NSLog(@"非卡主实际:   %d",(int)self.player.position.x);
+    NSLog(@"卡主不该走我了啊");
     
     _pastureLandBg.position = CGPointMake(_pastureLandBg.position.x - x, _pastureLandBg.position.y - y);
     

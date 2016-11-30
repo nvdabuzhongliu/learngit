@@ -19,14 +19,14 @@
         [self _createNodes];
     }
     
-    
     [self changePlayerPosition];
+    _bg.position = self.scenePoint;
 }
 
 - (void)_createNodes
 {
     self.physicsWorld.contactDelegate = self;
-    //分布式管理系统
+  
     [self setFrame];
     
     if ([kDeviceVersion floatValue] < 8.0) {
@@ -45,6 +45,14 @@
     //怪物
     [self setMonsterWithSuperSence:_bg imageNames:@[@"史莱姆.png",@"蝙蝠.png",@"史莱姆.png"]];
     
+    //最终boss
+    [self _createBoss];
+}
+
+- (void)_createBoss
+{
+    SKSpriteNode *node = (SKSpriteNode *)[_bg childNodeWithName:@"JYDoor1_4"];
+    [self setChangeSenceNode:node key:kSence_door1_4];
 }
 
 - (BOOL)moveActionWithkey:(NSString *)key x:(CGFloat)x y:(CGFloat)y
@@ -55,7 +63,7 @@
         return NO;
     }
     
-    NSLog(@"%lf",self.player.position.x);
+   // NSLog(@"%lf",self.player.position.x);
     
     _bg.position = CGPointMake(_bg.position.x - x, _bg.position.y - y);
     
@@ -73,6 +81,20 @@
     
     return YES;
     
+}
+
+- (void)didBeginContact:(SKPhysicsContact *)contact
+{
+    SKSpriteNode * A = (SKSpriteNode *)contact.bodyA.node;
+    //    SKSpriteNode * B = (SKSpriteNode *)contact.bodyB.node;
+    
+    if ([A.userData objectForKey:kSence_door1_4])
+    {
+        
+        [self presentSceneWithPosition:CGPointMake(500, 250) scenePosition:CGPointMake(-667, 0) texture:self.dic_player[@"down"][0] key:kSence_door1_4 tra:nil];
+    }
+    
+   
 }
 
 @end
