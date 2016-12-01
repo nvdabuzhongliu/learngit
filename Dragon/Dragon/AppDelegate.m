@@ -20,6 +20,7 @@
     NSLog(@"刘江伟-1232323");
     NSLog(@"刘江伟-555555555");
     NSLog(@"妈的智障");
+    NSLog(@"hahahahahahhahaha");
     return YES;
 }
 
